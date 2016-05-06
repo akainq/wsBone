@@ -8,8 +8,15 @@
 
         var me = this;
         var imageObj = new Image();
-        imageObj.src = '../img/txture01.png';
+            imageObj.src = '../img/txture01.png';
+            imageObj.onloadstart = function (ss) {
 
+        
+            };
+            imageObj.onerror = function (e){
+            
+                console.log(e);
+            }
         var pattern = this.ctx.createPattern(imageObj, 'repeat');
 
 
@@ -36,9 +43,10 @@
             this.ctx.stroke();
             this.ctx.closePath();
             this.ctx.font = "14px Arial";
-            this.ctx.fillStyle = "#FFF";
-            this.ctx.fillText(this.title, this.x + 15, this.y + 15, this.width - 1);
-
+            this.ctx.fillStyle = "#ccc";
+            this.ctx.fillText(imageObj.readyState, this.x + 15, this.y + 15, this.width - 1);
+          //  this.ctx.fillText(this.title, this.x + 15, this.y + 15, this.width - 1);
+            //this.ctx.fillText(imageObj.readyState, this.x + 15, this.y + 115, this.width - 1);
         }
 
 
