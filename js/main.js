@@ -3,7 +3,7 @@
  */
 
 
-var frame1 = new Frame('windows 1');
+var frame1 = new Form('windows 1');
     frame1.OnClick = function (e) {
 
         console.log("Click on windows 1");
@@ -20,7 +20,7 @@ var frame1 = new Frame('windows 1');
     };
 
 
-    var frame2 = new Frame('windows 2');
+    var frame2 = new Form('windows 2');
         frame2.OnClick = function (e) {
             console.log("Click on windows 2");
         };
