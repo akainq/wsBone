@@ -1,3 +1,5 @@
+'use strict';
+
 function $(userFunc) {
 
     window.userFunc = userFunc;
@@ -9,10 +11,10 @@ function $(userFunc) {
     function WSBone() {
         this.timer = 0;
         this.state = 'stop';
-        this.context = null;
-        this.mainConvas = null;
+        var context = {};
+        this.mainConvas = {};
         this.widgets = [];
-        var FocusElement = null;
+        var FocusElement = {};
         var wsbone = this;
         var layers = [];
 
@@ -39,7 +41,7 @@ function $(userFunc) {
 
             console.log("started...");
 
-            setInterval(this.Render, 10);
+            setInterval(this.Render, 1);
 
         }
 
@@ -58,7 +60,7 @@ function $(userFunc) {
             context.fillRect(0, 0, mainConvas.width, mainConvas.height);
 
 
-            for (i = 0; i < wsbone.widgets.length; i++) {
+            for (var i = 0; i < wsbone.widgets.length; i++) {
 
                 if (wsbone.widgets[i] != null)
                     if (wsbone.widgets[i].Visible == true) {

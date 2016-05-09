@@ -3,7 +3,7 @@
  */
 
 /****************************************************
- *  @Discription Основной класс-прототип виджетов
+ *  @Discription пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  ****************************************************/
 function Widget() {
 
@@ -16,6 +16,7 @@ function Widget() {
     this.focus = false;
     this.convas = document.getElementById("mainConvas");
     this.ctx = this.convas.getContext('2d');
+    this.widgetContainer = [];
 
     var me = this;
 
@@ -37,14 +38,16 @@ function Widget() {
 
     Widget.prototype.Draw = function () {
 
-        this.ctx.beginPath();
+      /*  this.ctx.beginPath();
         this.ctx.rect(this.x, this.y, this.width, this.height);
         this.ctx.fillStyle = '#878787';
         this.ctx.fill();
         this.ctx.lineWidth = 1;
        //   this.ctx.strokeStyle = this.focus ? "#CCC" : "#000";
        //  this.ctx.stroke();
-        this.ctx.closePath();
+        this.ctx.closePath();*/
     }
+
+
 }
 

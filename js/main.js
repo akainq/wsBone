@@ -9,7 +9,7 @@ var frame1 = new Form('windows 1');
         console.log("Click on windows 1");
     };
 
-    frame1.OnMouseMove = function (e) {
+   /* frame1.OnMouseMove = function (e) {
 
         if(e.buttons==1){
             frame1.title =  "x="+frame1.x+" y="+ frame1.y;
@@ -17,7 +17,7 @@ var frame1 = new Form('windows 1');
             frame1.y = e.y-  frame1.height / 2;;
         }
         console.log(e.buttons);
-    };
+    };*/
 
 
     var frame2 = new Form('windows 2');
@@ -29,7 +29,7 @@ var frame1 = new Form('windows 1');
         frame2.width  = 800;
         frame2.height  = 600;
 
-        frame2.OnMouseMove = function (e) {
+        /*frame2.OnMouseMove = function (e) {
 
             if(e.buttons==1){
                 frame2.title =  "x="+frame2.x+" y="+ frame2.y;
@@ -37,4 +37,4 @@ var frame1 = new Form('windows 1');
                 frame2.y = e.y-  frame2.height / 2;;
             }
             console.log(e.buttons);
-        };
+        };*/
